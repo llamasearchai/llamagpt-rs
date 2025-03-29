@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  llamagpt:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: llamagpt-mlx
+    volumes:
+      - ~/.config/ultimate-llamagpt-mlx:/root/.config/ultimate-llamagpt-mlx
+      - ~/.cache/ultimate-llamagpt-mlx:/root/.cache/ultimate-llamagpt-mlx
+    environment:
+      - RUST_LOG=info
+    stdin_open: true
+    tty: true
