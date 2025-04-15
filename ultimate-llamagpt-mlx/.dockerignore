@@ -1,0 +1,10 @@
+target
+Cargo.lock
+.git
+.gitignore
+.DS_Store
+.env
+*.log
+/docs
+.vscode/
+.idea/
